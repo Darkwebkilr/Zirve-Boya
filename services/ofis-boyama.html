@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofis Boyama Hizmeti | Zirve Boya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Sabit Butonlar -->
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
+        <a href="tel:05555555555" class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all">
+            <i class="fas fa-phone-alt text-2xl"></i>
+        </a>
+        <a href="https://wa.me/905555555555" class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Navigasyon -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../img/Zirve Boya.png" alt="Zirve Boya Logo" class="h-16">
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html" class="text-gray-700 hover:text-blue-600">Ana Sayfa</a>
+                <a href="../index.html#services" class="text-gray-700 hover:text-blue-600">Hizmetlerimiz</a>
+                <a href="../index.html#about" class="text-gray-700 hover:text-blue-600">Hakkımızda</a>
+                <a href="../index.html#portfolio" class="text-gray-700 hover:text-blue-600">Referanslar</a>
+                <a href="../index.html#contact" class="text-gray-700 hover:text-blue-600">İletişim</a>
+            </div>
+            
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobil Menü -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="../index.html" class="block py-2 text-blue-800 font-medium">Ana Sayfa</a>
+            <a href="../index.html#services" class="block py-2 text-gray-700 hover:text-blue-600">Hizmetlerimiz</a>
+            <a href="../index.html#about" class="block py-2 text-gray-700 hover:text-blue-600">Hakkımızda</a>
+            <a href="../index.html#portfolio" class="block py-2 text-gray-700 hover:text-blue-600">Referanslar</a>
+            <a href="../index.html#contact" class="block py-2 text-gray-700 hover:text-blue-600">İletişim</a>
+        </div>
+    </nav>
+
+    <!-- Hizmet Hero -->
+    <section class="service-hero text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">Ofis Boyama Hizmeti</h1>
+            <p class="text-xl max-w-2xl mx-auto">İş yerinize profesyonel bir görünüm kazandırıyoruz</p>
+        </div>
+    </section>
+
+    <!-- Hizmet Detayları -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-6">Profesyonel Ofis Boyama Hizmeti</h2>
+                    <p class="text-gray-600 mb-6">
+                        Zirve Boya olarak, ofis ortamlarınızı yenileyerek çalışma verimliliğini artırıyor ve kurumsal imajınızı güçlendiriyoruz. 
+                        Mesai saatleri dışında çalışarak iş akışınızı aksatmadan hizmet veriyoruz.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Mesai Dışı Çalışma</h4>
+                                <p class="text-gray-600">Hafta sonu ve mesai saatleri dışında çalışma imkanı</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Hızlı Kuruma</h4>
+                                <p class="text-gray-600">Hızlı kuruyan özel ofis boyaları ile minimum kesinti</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Temiz İşçilik</h4>
+                                <p class="text-gray-600">Eşyalarınızı koruyarak titiz çalışma</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="https://wa.me/905555555555" class="inline-block bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-all">
+                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp'tan Bilgi Al
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Ofis Boyama Uygulaması" 
+                         class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Süreç -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Ofis Boyama Sürecimiz</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">İşimizi nasıl yaptığımızı keşfedin</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-blue-600 text-4xl mb-4">1</div>
+                    <h3 class="font-bold text-lg mb-2">Planlama</h3>
+                    <p class="text-gray-600">İş akışınıza uygun çalışma programı oluşturulur</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-blue-600 text-4xl mb-4">2</div>
+                    <h3 class="font-bold text-lg mb-2">Koruma</h3>
+                    <p class="text-gray-600">Eşya ve zeminler özenle korunur</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-blue-600 text-4xl mb-4">3</div>
+                    <h3 class="font-bold text-lg mb-2">Uygulama</h3>
+                    <p class="text-gray-600">Profesyonel ekip ofis boyamasını gerçekleştirir</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-blue-600 text-4xl mb-4">4</div>
+                    <h3 class="font-bold text-lg mb-2">Teslim</h3>
+                    <p class="text-gray-600">Ofis tertemiz teslim edilir</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referanslar -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Ofis Boyama Referanslarımız</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">İstanbul'un birçok semtinde gerçekleştirdiğimiz başarılı projeler</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                         alt="Referans 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="font-bold text-lg mb-1">Levent'te Finans Şirketi</h3>
+                    <p class="text-gray-600 text-sm">500m² ofis alanı boya işleri</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Referans 2" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="font-bold text-lg mb-1">Maslak'ta Teknoloji Firması</h3>
+                    <p class="text-gray-600 text-sm">3 katlı ofis kompleksi boyaması</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Referans 3" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="font-bold text-lg mb-1">Ümraniye'de Showroom</h3>
+                    <p class="text-gray-600 text-sm">Mobilya showroomu boyama işleri</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-blue-800 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6">Ofisinizi Yenileyin!</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Profesyonel ekibimizle iş yerinize yeni bir soluk getirelim</p>
+            <a href="https://wa.me/905555555555" class="inline-block bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-all">
+                <i class="fab fa-whatsapp mr-2"></i> Hemen Fiyat Alın
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="../img/Zirve Boya.png" alt="Zirve Boya Logo" class="h-12">
+                    </div>
+                    <p class="text-gray-400">İstanbul'un en güvenilir boya ustaları. 15 yıllık tecrübemizle hizmetinizdeyiz.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Hızlı Linkler</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-all">Ana Sayfa</a></li>
+                        <li><a href="../index.html#services" class="text-gray-400 hover:text-white transition-all">Hizmetlerimiz</a></li>
+                        <li><a href="../index.html#about" class="text-gray-400 hover:text-white transition-all">Hakkımızda</a></li>
+                        <li><a href="../index.html#portfolio" class="text-gray-400 hover:text-white transition-all">Referanslar</a></li>
+                        <li><a href="../index.html#contact" class="text-gray-400 hover:text-white transition-all">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Hizmetlerimiz</h4>
+                    <ul class="space-y-2">
+                        <li><a href="ic-cephe-boya.html" class="text-gray-400 hover:text-white transition-all">İç Cephe Boya</a></li>
+                        <li><a href="dis-cephe-boya.html" class="text-gray-400 hover:text-white transition-all">Dış Cephe Boya</a></li>
+                        <li><a href="ofis-boyama.html" class="text-gray-400 hover:text-white transition-all">Ofis Boyama</a></li>
+                        <li><a href="mobilya-boyama.html" class="text-gray-400 hover:text-white transition-all">Mobilya Boyama</a></li>
+                        <li><a href="tamirat-onarim.html" class="text-gray-400 hover:text-white transition-all">Tamirat & Onarım</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">İletişim</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>Kadıköy, İstanbul</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2"></i>
+                            <span>0 (555) 555 55 55</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2"></i>
+                            <span>info@zirveboya.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center">
+                <p class="text-gray-400 text-sm">© 2023 Zirve Boya. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobil menü toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
