@@ -48,16 +48,22 @@
   </style>
 </head>
 
-<body class="font-sans bg-gray-50">
+<body class="font-sans overflow-x-hidden bg-gray-50">
   <!-- Sabit Butonlar -->
   <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
     <a href="tel:+905335953576"
       class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all">
-      <i class="fas fa-phone-alt text-2xl"></i>
+      <div class="flex justify-center items-center gap-3">
+        <p class="">Tıkla Ara</p>
+        <i class="fas fa-phone-alt text-2xl"></i>
+      </div>
     </a>
-    <a href="https://wa.me/905335953576?text=Merhaba,%20Zirve%20Boya%20hizmetleri%20hakkında%20bilgi%20almak%20istiyorum."
+    <a href="https://wa.me/905314730049?text=Merhaba,%20Zirve%20Boya%20hizmetleri%20hakkında%20bilgi%20almak%20istiyorum."
       class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all">
-      <i class="fab fa-whatsapp text-2xl"></i>
+      <div class="flex justify-center items-center gap-3">
+        <p class="">Whatsapp</p>
+        <i class="fab fa-whatsapp text-2xl"></i>
+      </div>
     </a>
   </div>
 
@@ -85,15 +91,22 @@
       </div>
     </div>
 
-    <!-- Mobil Menü -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
-      <a href="#" class="block py-2 text-blue-800 font-medium">Ana Sayfa</a>
-      <a href="#services" class="block py-2 text-gray-700 hover:text-blue-600">Hizmetlerimiz</a>
-      <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">Hakkımızda</a>
-      <a href="#portfolio" class="block py-2 text-gray-700 hover:text-blue-600">Referanslar</a>
-      <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">İletişim</a>
-    </div>
   </nav>
+  <!-- Mobil Menü -->
+  <div id="mobile-menu"
+    class="fixed top-0 right-[-100%] w-full h-full bg-gray-900 z-50 transition-all duration-300 ease-in-out md:hidden p-8">
+    <button id="menu-close" class="absolute top-6 right-6 text-gray-400 focus:outline-none">
+      <i class="fas fa-times text-4xl"></i>
+    </button>
+    <div class="flex flex-col h-full justify-center items-center space-y-8">
+      <a href="#" class="text-2xl text-white font-medium">Ana Sayfa</a>
+      <a href="#services" class="text-2xl text-gray-300 hover:text-white">Hizmetlerimiz</a>
+      <a href="#about" class="text-2xl text-gray-300 hover:text-white">Hakkımızda</a>
+      <a href="#portfolio" class="text-2xl text-gray-300 hover:text-white">Referanslar</a>
+      <a href="#contact" class="text-2xl text-gray-300 hover:text-white">İletişim</a>
+    </div>
+  </div>
+
 
   <!-- Hero Section -->
   <section class="hero-gradient text-white py-20 md:py-32">
@@ -473,9 +486,9 @@
                   <i class="fas fa-phone-alt text-blue-600"></i>
                 </div>
                 <div>
-                                    <h4 class="font-bold text-gray-800">Telefon</h4>
-                                    <p class="text-gray-600">+90 533 595 35 76 <br> +90 531 473 00 49</p>
-                                </div>
+                  <h4 class="font-bold text-gray-800">Telefon</h4>
+                  <p class="text-gray-600">+90 533 595 35 76 <br> +90 531 473 00 49</p>
+                </div>
               </div>
 
               <div class="flex items-start">
@@ -580,9 +593,9 @@
               <span>Kadıköy, İstanbul</span>
             </div>
             <div class="flex items-start">
-                            <i class="fas fa-phone-alt mt-1 mr-2"></i>
-                            <span>+90 533 595 35 76 <br> +90 531 473 00 49</span>
-                        </div>
+              <i class="fas fa-phone-alt mt-1 mr-2"></i>
+              <span>+90 533 595 35 76 <br> +90 531 473 00 49</span>
+            </div>
             <div class="flex items-start">
               <i class="fas fa-envelope mt-1 mr-2"></i>
               <span>info@zirveboya.com</span>
@@ -613,16 +626,44 @@
 
   <script>
     // Mobil menü toggle
-    document.getElementById('menu-toggle').addEventListener('click', function () {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuToggle && mobileMenu) {
+      const menuClose = document.getElementById('menu-close');
+
+      menuToggle.addEventListener('click', function () {
+        mobileMenu.classList.remove('right-[-100%]');
+        mobileMenu.classList.add('right-0');
+      });
+
+      if (menuClose) {
+        menuClose.addEventListener('click', function () {
+          mobileMenu.classList.remove('right-0');
+          mobileMenu.classList.add('right-[-100%]');
+        });
+      }
+
+      // Close menu when a link is clicked
+      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('right-0');
+          mobileMenu.classList.add('right-[-100%]');
+        });
+      });
+    }
 
     // Form gönderim simülasyonu
-    document.querySelector('form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      alert('Teşekkür ederiz! Talebiniz başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.');
-      this.reset();
-    });
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Teşekkür ederiz! Talebiniz başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.');
+        this.reset();
+      });
+    }
+
 
     // Sayfa yüklendiğinde animasyon
     document.addEventListener('DOMContentLoaded', function () {
